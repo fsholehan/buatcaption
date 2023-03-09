@@ -27,7 +27,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-gray-100 w-full">
+      <div className="w-full">
         <div className="flex items-center justify-center flex-col gap-y-4 md:w-2/5 w-3/4 mx-auto pt-10">
           <textarea
             onChange={(e) => setWord(e.target.value)}
