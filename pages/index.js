@@ -4,7 +4,7 @@ import Head from "next/head";
 import { useState } from "react";
 
 export default function Home() {
-  const [result, setResult] = useState({});
+  const [result, setResult] = useState("");
   const [word, setWord] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -15,7 +15,7 @@ export default function Home() {
       `https://tame-pear-catfish-belt.cyclic.app/api/?word=${word}`
     );
     const res = await data.data;
-    setResult(res);
+    setResult(res.content);
     setLoading(false);
   };
 
@@ -50,10 +50,10 @@ export default function Home() {
           {loading && <h1>Sebentar.....</h1>}
           {result && (
             <div className="w-full p-7 bg-white rounded-md">
-              <div>{result?.content}</div>
+              <div>{result}</div>
             </div>
           )}
-          <CopyButton text={result?.content} />
+          {result && <CopyButton text={result} />}
         </div>
       </div>
     </>
