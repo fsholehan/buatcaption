@@ -67,7 +67,7 @@ export default function Home() {
           </div>
         </div>
         <div className="md:w-2/5 w-3/4 mx-auto my-5 flex flex-col gap-y-2">
-          <h1 className="text-left font-medium">Masukkan text:</h1>
+          <h1 className="text-left font-medium">Masukkan teks:</h1>
           <span className="text-sm">
             contoh: <b>Buatkan iklan jasa bikin website</b>
           </span>
