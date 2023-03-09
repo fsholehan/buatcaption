@@ -52,7 +52,7 @@ export default function Home() {
           </button>
           {loading && <h1>Sebentar.....</h1>}
           {result && (
-            <div className="w-full p-7 bg-white rounded-md">
+            <div className="w-full p-7 bg-white rounded-md max-h-96 overflow-y-scroll">
               <div>{result}</div>
             </div>
           )}
