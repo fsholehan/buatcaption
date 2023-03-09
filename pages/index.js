@@ -29,15 +29,18 @@ export default function Home() {
       </Head>
       <div className="w-full">
         <div className="flex items-center justify-center flex-col gap-y-4 md:w-2/5 w-3/4 mx-auto pt-10">
-          <textarea
-            onChange={(e) => setWord(e.target.value)}
-            value={word}
-            tabIndex={0}
-            style={{ maxHeight: 200, height: 48, overflowY: "hidden" }}
-            rows={1}
-            className="m-0 w-full resize-none border-0 bg-white p-0 pl-2 pr-7 focus:ring-0 focus-visible:ring-0 dark:bg-transparent md:pl-0"
-            defaultValue={word}
-          />
+          <h1>Masukkan text:</h1>
+          <div className="bg-white w-full">
+            <textarea
+              onChange={(e) => setWord(e.target.value)}
+              value={word}
+              tabIndex={0}
+              style={{ maxHeight: 200, height: 48, overflowY: "hidden" }}
+              rows={1}
+              className="m-0 w-full resize-none border-0 bg-white p-0 pl-2 pr-7 focus:ring-0 focus-visible:ring-0 dark:bg-transparent md:pl-0"
+              defaultValue={word}
+            />
+          </div>
           <button
             onClick={handleSubmit}
             className="px-4 py-1 bg-cyan-600 text-white font-medium text-sm"
