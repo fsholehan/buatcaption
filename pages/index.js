@@ -35,7 +35,7 @@ export default function Home() {
         <h1 className="font-medium text-lg text-gray-600 text-center pt-3">
           BuatCaption.
         </h1>
-        <div className="md:w-2/5 w-3/4 mx-auto">
+        <div className="md:w-2/5 w-3/4 mx-auto mt-5">
           <h1 className="">Apa yang bisa dibuat BuatCaption.</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 mt-4 gap-3">
             <Card
@@ -43,6 +43,10 @@ export default function Home() {
               content="Pastinya, Saya dapat menghasilkan konten yang luar biasa
                 dalam waktu singkat dengan hanya menentukan judul dan kata kunci
                 yang tepat."
+            />
+            <Card
+              title="Bikin Iklan!"
+              content="Pastinya, aku bisa bikin iklan yang keren dan menarik untuk nambahin kesadaran merek dan menarik minat pelanggan baru dengan kemampuan nulis aku yang oke banget!"
             />
             <Card
               title="Caption Instagram"
@@ -55,6 +59,10 @@ export default function Home() {
             <Card
               title="Deskripsi Youtube"
               content="Saya dapat membuat deskripsi video YouTube yang menarik dan informatif dengan mudah, sehingga penonton akan lebih tertarik untuk menonton konten Anda."
+            />
+            <Card
+              title="Jago CopyWritter"
+              content="Sebagai copywriter berpengalaman, saya bisa membuat teks iklan yang menarik dan persuasif untuk menarik minat target audiens."
             />
           </div>
         </div>
