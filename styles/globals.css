@@ -7,3 +7,9 @@
     @apply bg-gray-100;
   }
 }
+
+@layer components {
+  .card {
+    @apply p-5 bg-white rounded-md flex flex-col gap-y-1;
+  }
+}

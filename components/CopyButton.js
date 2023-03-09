@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const CopyButton = ({ text }) => {
+const CopyButton = ({ text, title }) => {
   const [copySuccess, setCopySuccess] = useState("");
 
   const copyToClipBoard = async (copyMe) => {
@@ -9,7 +9,7 @@ const CopyButton = ({ text }) => {
       setCopySuccess("Copied!");
       setTimeout(() => {
         setCopySuccess("");
-      }, 2000);
+      }, 1000);
     } catch (err) {
       setCopySuccess("Failed to copy!");
     }
@@ -19,10 +19,10 @@ const CopyButton = ({ text }) => {
     <div className="flex flex-col gap-y-2">
       {copySuccess}
       <button
-        className="bg-gray-300 px-2 py-1 active:scale-95 transition duration-75"
+        className="bg-gray-300 px-3 py-1 active:scale-95 transition duration-75 text-sm"
         onClick={() => copyToClipBoard(text)}
       >
-        Salin
+        {title}
       </button>
     </div>
   );
