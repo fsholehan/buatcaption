@@ -9,7 +9,7 @@ const CopyButton = ({ text }) => {
       setCopySuccess("Copied!");
       setTimeout(() => {
         setCopySuccess("");
-      }, 5000); // set timeout to 5 seconds
+      }, 2000);
     } catch (err) {
       setCopySuccess("Failed to copy!");
     }
