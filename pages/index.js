@@ -53,7 +53,7 @@ export default function Home() {
           {loading && <h1>Sebentar.....</h1>}
           {result && (
             <div className="w-full p-7 bg-white rounded-md max-h-96 overflow-y-scroll">
-              <div>{result}</div>
+              <div className="whitespace-pre-line">{result}</div>
             </div>
           )}
           {result && <CopyButton text={result} />}
