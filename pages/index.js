@@ -10,6 +10,9 @@ export default function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (word === "") {
+      return;
+    }
     setLoading(true);
     const data = await axios.get(
       `https://tame-pear-catfish-belt.cyclic.app/api/?word=${word}`
@@ -27,7 +30,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="w-full">
+      <div className="w-full pb-10">
         <div className="flex items-center justify-center flex-col gap-y-4 md:w-2/5 w-3/4 mx-auto pt-10">
           <h1>Masukkan text:</h1>
           <div className="bg-white w-full">
@@ -43,7 +46,7 @@ export default function Home() {
           </div>
           <button
             onClick={handleSubmit}
-            className="px-4 py-1 bg-cyan-600 text-white font-medium text-sm"
+            className="px-4 py-1 bg-cyan-600 text-white font-medium text-sm active:scale-95 duration-75 transition"
           >
             Buat
           </button>

@@ -19,10 +19,10 @@ const CopyButton = ({ text }) => {
     <div className="flex flex-col gap-y-2">
       {copySuccess}
       <button
-        className="bg-gray-300 px-2 py-1"
+        className="bg-gray-300 px-2 py-1 active:scale-95 transition duration-75"
         onClick={() => copyToClipBoard(text)}
       >
-        copy
+        Salin
       </button>
     </div>
   );
