@@ -16,7 +16,7 @@ export default function Home() {
     }
     setLoading(true);
     const data = await axios.get(
-      `https://tame-pear-catfish-belt.cyclic.app/api/?word=${word}`
+      `${process.env.NEXT_PUBLIC_API_URL}/api/?word=${word}`
     );
     const res = await data.data;
     setResult(res.content);
