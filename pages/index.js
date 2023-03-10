@@ -92,9 +92,11 @@ export default function Home() {
             Buat
           </button>
           {loading && (
-            <div className="flex items-center justify-center gap-x-2">
-              <Spinner color="text-white" height="h-5" />
-              <span>Sebentar.....</span>
+            <div className="flex items-center justify-center gap-x-2 bg-white w-full py-3 rounded-md">
+              <Spinner color="text-gray-600" height="h-5" />
+              <span className="text-gray-500 text-sm font-medium">
+                Sebentar.....
+              </span>
             </div>
           )}
           {result && <CopyButton text={result} title="Salin" />}
