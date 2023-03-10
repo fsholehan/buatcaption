@@ -1,5 +1,6 @@
 import Card from "@/components/Card";
 import CopyButton from "@/components/CopyButton";
+import Spinner from "@/components/Spinner";
 import axios from "axios";
 import Head from "next/head";
 import { useState } from "react";
@@ -90,7 +91,12 @@ export default function Home() {
           >
             Buat
           </button>
-          {loading && <h1>Sebentar.....</h1>}
+          {loading && (
+            <div className="flex items-center justify-center gap-x-2">
+              <Spinner color="text-white" height="h-5" />
+              <span>Sebentar.....</span>
+            </div>
+          )}
           {result && <CopyButton text={result} title="Salin" />}
           {result && (
             <div className="w-full p-7 bg-white rounded-md max-h-96 overflow-y-scroll">
