@@ -17,7 +17,7 @@ export default function Home() {
     }
     setLoading(true);
     const data = await axios.get(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/?word=${word}`
+      `${process.env.NEXT_PUBLIC_API_URL}/ask/?question=${word}`
     );
     const res = await data.data;
     setResult(res.content);
