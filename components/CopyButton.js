@@ -16,7 +16,7 @@ const CopyButton = ({ text, title }) => {
   };
 
   return (
-    <div className="flex flex-col gap-y-2">
+    <div className="flex flex-col gap-y-3">
       {copySuccess}
       <button
         className="bg-gray-300 px-3 py-1 active:scale-95 transition duration-75 text-sm"
